@@ -36,7 +36,7 @@ WebTools/
 ├── .gitignore
 ├── docs/                      # 所有文档统一存放目录
 ├── temp/                      # 项目临时文件（不入版本管理）
-├── reports/                   # 代码检视报告与其它生成的报告
+├── reports/                   # 代码检视报告与其它生成的报告（不入版本管理）
 ├── index.html                 # SPA 入口（工程骨架初始化后创建）
 ├── package.json               # 工程骨架初始化后创建
 ├── public/                    # 静态资源（工程骨架初始化后创建）

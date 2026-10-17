@@ -22,5 +22,6 @@ Thumbs.db
 npm-debug.log*
 .vite/
 
-# 临时文件（规范：所有临时文件放 temp/，不入版本库）
+# 临时文件与生成的报告（规范：temp/、reports/ 均不入版本库）
 temp/
+reports/
