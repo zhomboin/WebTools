@@ -15,12 +15,13 @@
 
 ## 2. 前端工程约束
 
-- 技术栈：React + TypeScript（strict 模式）+ Vite，包管理器 npm；
+- 技术栈：React + TypeScript（strict 模式）+ Vite，包管理器 npm，lint 使用 oxlint；
 - 形态：纯静态 SPA。无后端、无数据库、无登录、无用户体系；禁止引入任何依赖服务端的库或服务；
 - 本地处理原则：所有工具的数据处理必须在用户浏览器本地完成，**禁止将用户输入发送到网络**；
 - 分层约定：
   - `src/lib/`：工具核心逻辑，纯 TS 模块，不依赖 DOM / React，可单元测试；
   - `src/pages/`、`src/components/`：只做参数收集、结果展示与交互，不放业务逻辑；
+- 路由：采用 hash 路由（`createHashRouter`），无需为静态托管配置 SPA fallback；
 - 性能：路由按工具拆分页面并全部 lazy 加载；重型依赖（如 hash-wasm、ed25519-keygen、pica）一律动态 import 按需加载，不进主包；
 - 依赖策略：优先使用浏览器原生 API（JSON 内置、Canvas、WebCrypto、Intl）；新增第三方依赖须在 PR 中说明必要性；
 - UI 约定：每个工具页显著标注"所有处理均在本地浏览器完成，数据不会上传"；密码、密钥、图片类工具尤其必要；
@@ -34,6 +35,12 @@ WebTools/
 ├── .editorconfig              # 文件基础格式约束（UTF-8 无 BOM、LF 等）
 ├── .gitattributes             # git 文本/换行规范化
 ├── .gitignore
+├── .oxlintrc.json             # oxlint 配置
+├── index.html                 # SPA 入口
+├── package.json
+├── tsconfig.json / tsconfig.app.json / tsconfig.node.json
+├── vite.config.ts
+├── public/                    # 静态资源
 ├── docs/                      # 所有文档统一存放目录
 │   ├── requirements-analysis.md   # 需求与技术分析
 │   ├── conventions.md             # 项目规范（本文档）
@@ -41,14 +48,13 @@ WebTools/
 │   └── changelog.md               # 变更记录
 ├── temp/                      # 项目临时文件（不入版本管理）
 ├── reports/                   # 代码检视报告与其它生成的报告（不入版本管理）
-├── index.html                 # SPA 入口（工程骨架初始化后创建）
-├── package.json               # 工程骨架初始化后创建
-├── public/                    # 静态资源（工程骨架初始化后创建）
-└── src/                       # 工程骨架初始化后创建
+└── src/
+    ├── main.tsx               # 应用入口
+    ├── index.css              # 全局样式
     ├── pages/                 # 工具页面，按 json/ image/ crypto/ datetime/ 分子目录
     ├── lib/                   # 纯 TS 核心逻辑（json、image、crypto、datetime 独立模块）
-    ├── components/            # 共享 UI（结果面板、复制按钮、隐私提示等）
-    └── routes/                # 路由定义
+    ├── components/            # 共享 UI（布局、隐私提示、工具页外壳等）
+    └── routes/                # 路由定义（hash 路由，全部 lazy 加载）
 ```
 
 ## 4. Git 工作流
