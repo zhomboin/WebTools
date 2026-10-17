@@ -5,9 +5,9 @@
 ## 当前状态
 
 - 阶段：M1 第一期开发（JSON 处理、日期时间）
-- 已完成：需求与技术分析文档；项目规范与文档体系（含 `temp/`、`reports/` 目录约束）；工程骨架（Vite + React + TypeScript strict + oxlint，hash 路由，首页与四大类工具页占位，隐私提示组件）；GitHub 远端接入（SSH），main 已推送；开发计划制定（M0–M5）
-- 进行中：无
-- 下一步：开发计划序号 1 —— `feature/json-tools`（见 [开发计划](development-plan.md)）
+- 已完成：需求与技术分析文档；项目规范与文档体系（含 `temp/`、`reports/` 目录约束）；工程骨架（Vite + React + TypeScript strict + oxlint，hash 路由，首页与四大类工具页占位，隐私提示组件）；GitHub 远端接入（SSH），main 已推送；开发计划制定（M0–M5）；JSON 处理工具（自研解析器精确定位错误行列、格式化/压缩/排序/Unicode 转义、vitest 单测 23 例）
+- 进行中：开发计划序号 2 —— `feature/datetime-tools`
+- 下一步：M2 第二期安全工具（见 [开发计划](development-plan.md)）
 
 ## 修改记录
 
@@ -20,6 +20,7 @@
 | 2026-10-17 | 前端工程初始化：Vite + React + TypeScript（strict）+ oxlint + react-router（hash 路由）；首页与四大类工具页（占位）全部 lazy 加载；隐私提示组件与全局样式；`npm run build` / `npm run lint` / preview 冒烟测试通过 | feature/project-init | `package.json`、`index.html`、`tsconfig*.json`、`vite.config.ts`、`.oxlintrc.json`、`public/`、`src/`、`README.md`、`docs/conventions.md` |
 | 2026-10-17 | 接入 GitHub 远端并推送 main：SSH 认证测试通过，`origin` = `git@github.com:zhomboin/WebTools.git`（HTTPS 地址 `https://github.com/zhomboin/WebTools.git` 留作备用） | docs/add-github-remote | `docs/conventions.md`、`docs/progress.md` |
 | 2026-10-17 | 制定开发计划：M0–M5 里程碑、第一期两项 PR 拆分、每 PR 执行约定；接入真实 GitHub PR 流程（gh CLI） | docs/development-plan | `docs/development-plan.md`、`docs/progress.md`、`README.md` |
+| 2026-10-17 | JSON 处理工具：自研递归下降解析器（错误定位到行列，不依赖引擎报错格式）、格式化/压缩/校验/key 排序/Unicode 转义反转义、5MB 输入上限、复制/下载；引入 vitest（23 例单测）；共享 CopyButton 组件；build/lint/test 全绿，浏览器 GUI 冒烟通过 | feature/json-tools | `src/lib/json.ts`、`src/lib/json.test.ts`、`src/pages/json/JsonPage.tsx`、`src/components/CopyButton.tsx`、`src/index.css`、`package.json` |
 
 ## 专项进度文档
 
