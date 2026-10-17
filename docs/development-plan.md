@@ -7,7 +7,7 @@
 | 阶段 | 内容 | 状态 |
 | --- | --- | --- |
 | M0 工程骨架 | Vite + React + TS strict + oxlint，hash 路由，四大类页面占位 | 已完成 |
-| M1 第一期：JSON + 日期时间 | JSON 处理工具、日期时间工具，引入 vitest 单测 | 进行中 |
+| M1 第一期：JSON + 日期时间 | JSON 处理工具、日期时间工具，引入 vitest 单测 | 已完成 |
 | M2 第二期：安全工具 | 密码生成、Hash、加密 | 待开始 |
 | M3 第三期：图片处理 | 压缩、格式转换 | 待开始 |
 | M4 第四期：SSH 密钥对 | Ed25519 密钥对生成 | 待开始 |
@@ -18,7 +18,7 @@
 | 序号 | 分支 | 范围 | 状态 |
 | --- | --- | --- | --- |
 | 1 | `feature/json-tools` | 引入 vitest（devDependency，`npm test`）；`src/lib/json.ts`：格式化（2/4 空格）、压缩、校验（错误定位到行列）、key 排序、Unicode 转义/反转义；输入上限 5MB 并提示（Web Worker 兜底后置）；JsonPage：输入/输出双栏、操作栏、错误定位展示、复制/下载 | 已完成 |
-| 2 | `feature/datetime-tools` | `src/lib/datetime.ts`：Unix 时间戳 ↔ 日期互转（秒/毫秒自动识别）、时区转换（`Intl` + 全量时区列表）、自定义格式化与解析（`yyyy/MM/dd/HH/mm/ss/SSS` 子集）、相对时间（`Intl.RelativeTimeFormat`）、时间差计算；DatetimePage 分块 UI；共享 `CopyButton` 组件 | 待开始 |
+| 2 | `feature/datetime-tools` | `src/lib/datetime.ts`：Unix 时间戳 ↔ 日期互转（秒/毫秒自动识别）、时区转换（`Intl` + 全量时区列表）、自定义格式化与解析（`yyyy/MM/dd/HH/mm/ss/SSS` 子集）、相对时间（`Intl.RelativeTimeFormat`）、时间差计算；DatetimePage 分块 UI；共享 `CopyButton` 组件 | 已完成 |
 
 ## M2 第二期：安全工具
 
