@@ -15,6 +15,7 @@
 | --- | --- | --- | --- |
 | 2026-10-17 | 落盘需求与技术分析文档（自上一项目迁移，作为本项目初始需求与技术分析） | main | `docs/requirements-analysis.md` |
 | 2026-10-17 | 初始化项目基础规范与文档体系：UTF-8 无 BOM 文件约束、前端工程约束、目录结构、Git 工作流（main + feature 分支 + PR + 合并前代码检视）、文档维护规则；初始化 git 仓库 | main | `README.md`、`docs/conventions.md`、`docs/progress.md`、`docs/changelog.md` |
+| 2026-10-17 | 新增目录约束：项目临时文件统一放 `temp/`（不入版本管理），代码检视及其它生成的报告统一放 `reports/`（纳入版本管理，命名 `YYYY-MM-DD-<主题>.md`）；同步更新目录结构与 `.gitignore` | docs/temp-and-reports-dirs | `docs/conventions.md`、`README.md`、`.gitignore` |
 
 ## 专项进度文档
 
