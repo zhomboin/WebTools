@@ -55,6 +55,7 @@ WebTools/
 | 文档 | 说明 |
 | --- | --- |
 | [需求与技术分析](docs/requirements-analysis.md) | 平台定位、分项技术方案、实施分期 |
+| [开发计划](docs/development-plan.md) | 里程碑、各期 PR 拆分与执行约定 |
 | [项目规范](docs/conventions.md) | 文件约束、前端工程约束、目录结构、Git 工作流、文档维护规则 |
 | [进度记录](docs/progress.md) | 项目进度主文档，记录每次修改 |
 | [变更记录](docs/changelog.md) | 全项目唯一的历史变更与推翻内容记录 |
