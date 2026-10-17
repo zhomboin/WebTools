@@ -1,0 +1,16 @@
+# EditorConfig: https://editorconfig.org
+# 全项目文件基础格式的唯一约束来源
+root = true
+
+# charset = utf-8 即 UTF-8 无 BOM；带 BOM 的变体写作 utf-8-bom，禁止使用
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Markdown 保留行尾双空格硬换行，不做行尾空白清理
+[*.md]
+trim_trailing_whitespace = false
