@@ -9,7 +9,9 @@
 - 文件末尾保留一个空行（`insert_final_newline`）；除 Markdown 外去除行尾空白；
 - 缩进：统一 2 空格，不使用 Tab；
 - 文档文件名：小写英文 kebab-case（如 `requirements-analysis.md`）；文档内容语言为中文；
-- 所有文档统一放在 `docs/` 目录下，唯一例外是根目录的 `README.md`（项目入口）。
+- 所有文档统一放在 `docs/` 目录下，唯一例外是根目录的 `README.md`（项目入口）；
+- 项目临时文件统一放在根目录 `temp/` 下，不纳入版本管理（已加入 `.gitignore`）；
+- 代码检视报告与其它生成的报告统一放在根目录 `reports/` 下，纳入版本管理，文件命名 `YYYY-MM-DD-<主题>.md`。
 
 ## 2. 前端工程约束
 
@@ -37,6 +39,8 @@ WebTools/
 │   ├── conventions.md             # 项目规范（本文档）
 │   ├── progress.md                # 进度记录（主文档）
 │   └── changelog.md               # 变更记录
+├── temp/                      # 项目临时文件（不入版本管理）
+├── reports/                   # 代码检视报告与其它生成的报告
 ├── index.html                 # SPA 入口（工程骨架初始化后创建）
 ├── package.json               # 工程骨架初始化后创建
 ├── public/                    # 静态资源（工程骨架初始化后创建）
