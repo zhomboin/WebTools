@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --text-secondary: #57606a;
+  --border: #d0d7de;
+  --accent: #2563eb;
+  --accent-weak: #dbeafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.app-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  background: var(--accent-weak);
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.app-footer {
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.home-hero {
+  margin-bottom: 24px;
+}
+
+.home-hero h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.home-hero p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tool-card {
+  display: block;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.tool-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+}
+
+.tool-card h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.tool-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.tool-page h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.tool-description {
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+}
+
+.privacy-notice {
+  margin: 0 0 20px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: var(--accent-weak);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+}
+
+.tool-placeholder {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--text-secondary);
+}
+
+.tool-placeholder p {
+  margin: 0;
+}
+
+.tool-placeholder ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.loading {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--text-secondary);
+}

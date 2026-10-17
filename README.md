@@ -19,8 +19,6 @@
 
 ## 快速开始
 
-工程骨架尚未初始化；初始化后本节命令生效。
-
 ```bash
 npm install
 npm run dev
@@ -34,17 +32,22 @@ WebTools/
 ├── .editorconfig              # 文件基础格式约束（UTF-8 无 BOM、LF 等）
 ├── .gitattributes             # git 文本/换行规范化
 ├── .gitignore
+├── .oxlintrc.json             # oxlint 配置
+├── index.html                 # SPA 入口
+├── package.json
+├── tsconfig.json / tsconfig.app.json / tsconfig.node.json
+├── vite.config.ts
+├── public/                    # 静态资源
 ├── docs/                      # 所有文档统一存放目录
 ├── temp/                      # 项目临时文件（不入版本管理）
 ├── reports/                   # 代码检视报告与其它生成的报告（不入版本管理）
-├── index.html                 # SPA 入口（工程骨架初始化后创建）
-├── package.json               # 工程骨架初始化后创建
-├── public/                    # 静态资源（工程骨架初始化后创建）
 └── src/
+    ├── main.tsx               # 应用入口
+    ├── index.css              # 全局样式
     ├── pages/                 # 工具页面，按 json/ image/ crypto/ datetime/ 分子目录
     ├── lib/                   # 纯 TS 核心逻辑（json、image、crypto、datetime 独立模块）
-    ├── components/            # 共享 UI（结果面板、复制按钮、隐私提示等）
-    └── routes/                # 路由定义
+    ├── components/            # 共享 UI（布局、隐私提示、工具页外壳等）
+    └── routes/                # 路由定义（hash 路由，全部 lazy 加载）
 ```
 
 ## 文档
