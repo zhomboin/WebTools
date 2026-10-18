@@ -25,7 +25,7 @@
 | 序号 | 分支 | 范围 | 状态 |
 | --- | --- | --- | --- |
 | 3 | `feature/password-generator` | `crypto.getRandomValues` + 拒绝采样避免模偏差；长度、字符集、排除易混淆字符选项；强度估算展示 | 已完成 |
-| 4 | `feature/hash-tools` | WebCrypto（SHA-1/SHA-256/SHA-384/SHA-512、HMAC）；`hash-wasm` 动态 import（MD5/CRC32/SHA-3）；支持文本输入 | 待开始 |
+| 4 | `feature/hash-tools` | WebCrypto（SHA-1/SHA-256/SHA-384/SHA-512、HMAC）；`hash-wasm` 动态 import（MD5/CRC32/SHA-3）；支持文本输入 | 已完成 |
 | 5 | `feature/encryption` | AES-GCM（默认，12 字节 IV）/ AES-CBC，口令派生密钥用 PBKDF2；RSA-OAEP 加解密 | 待开始 |
 
 ## M3 第三期：图片处理
