@@ -26,6 +26,7 @@
 | 2026-10-18 | 密码生成器：`crypto.getRandomValues` 拒绝采样避免模偏差、四类字符集 + 排除易混淆字符、每类至少一位保证、Fisher-Yates 洗牌、熵估算与五级强度条；随机源可注入（单测 12 例）；build/lint/test 全绿，GUI 冒烟（截图视觉验收）通过 | feature/password-generator | `src/lib/password.ts`、`src/lib/password.test.ts`、`src/pages/crypto/`、`src/index.css` |
 | 2026-10-18 | Hash 计算：WebCrypto（SHA-1/256/384/512 + HMAC）+ hash-wasm 动态 import（MD5/CRC32/SHA-3，独立 chunk 不进主包）；15 例已知向量单测；GUI 冒烟并与 Node webcrypto 交叉验证结果一致（发现并桥接 hash-wasm crc32 类型声明与运行时不一致） | feature/hash-tools | `src/lib/hash.ts`、`src/lib/hash.test.ts`、`src/pages/crypto/sections/HashSection.tsx`、`src/index.css`、`package.json` |
 | 2026-10-18 | 加解密：AES-GCM（12 字节 IV）/AES-CBC + PBKDF2（10 万次迭代）口令派生，密文格式 Base64(salt+iv+cipher)；RSA-OAEP 3072 位密钥对生成（SPKI/PKCS8 PEM 导出导入）；14 例单测（往返、错口令、损坏数据、密钥不匹配）；浏览器 GUI 验证 AES 与 RSA 加解密往返（含中文与 emoji）完全一致；M2 第二期完成 | feature/encryption | `src/lib/encryption.ts`、`src/lib/encryption.test.ts`、`src/pages/crypto/sections/EncryptionSection.tsx`、`src/index.css` |
+| 2026-10-18 | 安全工具页 Tab 化（用户反馈：多功能堆叠无重点）：新增共享 Tabs 组件（无障碍 tablist + 方向键），四个功能 Tab 各自呈现重点；EncryptionSection 拆分为 SymmetricSection 与 RsaSection；UI 布局约定写入规范（多功能必须 Tab 分隔、卡片适度使用） | feature/crypto-tabs | `src/components/Tabs.tsx`、`src/pages/crypto/`、`src/index.css`、`docs/conventions.md` |
 
 ## 专项进度文档
 

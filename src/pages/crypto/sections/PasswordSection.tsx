@@ -57,12 +57,7 @@ export default function PasswordSection() {
   })()
 
   return (
-    <section className="tsec">
-      <div className="tsec-head">
-        <h2>密码生成</h2>
-        <span className="sub">crypto.getRandomValues · 拒绝采样</span>
-      </div>
-
+    <div>
       <div className="field">
         <label>
           长度：{options.length} 位
@@ -132,6 +127,7 @@ export default function PasswordSection() {
           )}
         </>
       )}
-    </section>
+      <p className="hint-text">使用 crypto.getRandomValues 并以拒绝采样避免模偏差。</p>
+    </div>
   )
 }
