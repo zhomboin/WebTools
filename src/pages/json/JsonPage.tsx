@@ -102,7 +102,7 @@ export default function JsonPage() {
   }
 
   return (
-    <ToolPageShell title="JSON 处理" description="格式化、压缩、校验、排序 JSON 数据。">
+    <ToolPageShell category="json" title="JSON 处理" description="格式化、压缩、校验、排序 JSON 数据。">
       <div className="toolbar">
         <label className="inline-field">
           缩进

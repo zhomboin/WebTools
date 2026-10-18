@@ -41,8 +41,11 @@ export default function TimeZoneSection() {
   }
 
   return (
-    <section className="section-card">
-      <h2>时区转换</h2>
+    <section className="tsec">
+      <div className="tsec-head">
+        <h2>时区转换</h2>
+        <span className="sub">全量 IANA 时区</span>
+      </div>
       <div className="field">
         <label>
           日期时间（本地时区 {local}）

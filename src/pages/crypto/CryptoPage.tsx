@@ -4,7 +4,7 @@ const plannedTools = ['密码生成', 'SSH 密钥对生成', '常见加密', '�
 
 export default function CryptoPage() {
   return (
-    <ToolPageShell title="安全工具" description="密码生成、SSH 密钥对、加密与 Hash 计算。">
+    <ToolPageShell category="crypto" title="安全工具" description="密码生成、SSH 密钥对、加密与 Hash 计算。">
       <div className="tool-placeholder">
         <p>该类工具正在建设中，计划提供：</p>
         <ul>

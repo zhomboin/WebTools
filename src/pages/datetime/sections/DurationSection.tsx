@@ -16,8 +16,10 @@ export default function DurationSection() {
   }, [startInput, endInput])
 
   return (
-    <section className="section-card">
-      <h2>时间差计算</h2>
+    <section className="tsec">
+      <div className="tsec-head">
+        <h2>时间差计算</h2>
+      </div>
       <div className="field">
         <label>
           开始时间（本地时区）

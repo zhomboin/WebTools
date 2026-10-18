@@ -22,8 +22,11 @@ export default function TimestampSection() {
   }, [dateInput])
 
   return (
-    <section className="section-card">
-      <h2>时间戳 ⇄ 日期</h2>
+    <section className="tsec">
+      <div className="tsec-head">
+        <h2>时间戳 ⇄ 日期</h2>
+        <span className="sub">秒 / 毫秒自动识别</span>
+      </div>
       <div className="section-grid">
         <div>
           <h3>时间戳 → 日期</h3>
