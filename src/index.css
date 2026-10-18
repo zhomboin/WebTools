@@ -647,23 +647,6 @@ body {
   color: var(--text-secondary);
 }
 
-.tool-placeholder {
-  margin-top: 26px;
-  padding: 28px 24px;
-  border: 1px dashed var(--border);
-  border-radius: 12px;
-  color: var(--text-secondary);
-}
-
-.tool-placeholder p {
-  margin: 0;
-}
-
-.tool-placeholder ul {
-  margin: 8px 0 0;
-  padding-left: 20px;
-}
-
 /* ============ 密码生成 ============ */
 
 .range-input {
@@ -786,6 +769,103 @@ body {
 
 .enc-key-input + .toolbar {
   margin-top: 0;
+}
+
+/* ============ 图片处理 ============ */
+
+.file-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-size: 14.5px;
+  color: var(--c);
+  background: var(--c-bg);
+  border: 1px solid var(--c-bd);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.file-picker:hover {
+  filter: brightness(0.97);
+}
+
+.image-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-table th,
+.image-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: middle;
+}
+
+.image-table tr:last-child td {
+  border-bottom: none;
+}
+
+.image-table th {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: var(--surface-soft);
+}
+
+.image-table .thumb img {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 80px;
+  border-radius: 6px;
+}
+
+.image-table .file-cell {
+  max-width: 260px;
+  word-break: break-all;
+  font-size: 13.5px;
+}
+
+.image-table .num {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.image-table button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.image-table button:hover {
+  color: var(--c);
+  border-color: var(--c-bd);
+}
+
+.ok-text {
+  color: var(--ok);
+  white-space: nowrap;
+}
+
+.muted-text {
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 /* ============ Tab 切换 ============ */
