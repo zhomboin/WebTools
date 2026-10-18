@@ -1,5 +1,6 @@
 import ToolPageShell from '../../components/ToolPageShell'
 
+import EncryptionSection from './sections/EncryptionSection'
 import HashSection from './sections/HashSection'
 import PasswordSection from './sections/PasswordSection'
 
@@ -12,6 +13,7 @@ export default function CryptoPage() {
     >
       <PasswordSection />
       <HashSection />
+      <EncryptionSection />
     </ToolPageShell>
   )
 }

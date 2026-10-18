@@ -770,6 +770,24 @@ body {
   font-weight: 650;
 }
 
+/* ============ 加解密 ============ */
+
+.enc-input {
+  width: 100%;
+  min-height: 110px;
+}
+
+.enc-key-input {
+  width: 100%;
+  min-height: 150px;
+  font-size: 12px;
+  white-space: pre;
+}
+
+.enc-key-input + .toolbar {
+  margin-top: 0;
+}
+
 /* ============ 自适应 ============ */
 
 @media (max-width: 660px) {
