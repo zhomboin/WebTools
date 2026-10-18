@@ -664,6 +664,98 @@ body {
   padding-left: 20px;
 }
 
+/* ============ 密码生成 ============ */
+
+.range-input {
+  width: 260px;
+  max-width: 100%;
+  accent-color: var(--c);
+}
+
+.check-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-bottom: 16px;
+}
+
+.check-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.check-item input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--c);
+  cursor: pointer;
+}
+
+.password-output {
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+  min-height: 52px;
+}
+
+.strength-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.strength-bar {
+  flex: 1;
+  min-width: 200px;
+  max-width: 420px;
+  height: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+.fill-very-weak {
+  background: #b91c1c;
+}
+
+.fill-weak {
+  background: #ea580c;
+}
+
+.fill-fair {
+  background: #ca8a04;
+}
+
+.fill-strong {
+  background: #65a30d;
+}
+
+.fill-very-strong {
+  background: #15803d;
+}
+
+.strength-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
 /* ============ 自适应 ============ */
 
 @media (max-width: 660px) {
