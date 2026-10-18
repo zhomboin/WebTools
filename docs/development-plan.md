@@ -9,7 +9,7 @@
 | M0 工程骨架 | Vite + React + TS strict + oxlint，hash 路由，四大类页面占位 | 已完成 |
 | M1 第一期：JSON + 日期时间 | JSON 处理工具、日期时间工具，引入 vitest 单测 | 已完成 |
 | M2 第二期：安全工具 | 密码生成、Hash、加密 | 已完成 |
-| M3 第三期：图片处理 | 压缩、格式转换 | 待开始 |
+| M3 第三期：图片处理 | 压缩、格式转换 | 已完成 |
 | M4 第四期：SSH 密钥对 | Ed25519 密钥对生成 | 待开始 |
 | M5 扩展候选 | Base64/URL 编解码、UUID、JWT 解码、二维码、正则测试、文本 Diff、颜色转换、单位换算等 | 按需排期 |
 
@@ -32,7 +32,7 @@
 
 | 序号 | 分支 | 范围 | 状态 |
 | --- | --- | --- | --- |
-| 6 | `feature/image-tools` | `createImageBitmap`（EXIF 方向自动摆正）+ `OffscreenCanvas` + `toBlob`；PNG/JPEG/WebP 互转、JPEG/WebP 质量压缩、分辨率缩放；批量处理、压缩前后体积对比、下载；UI 明示限制（无 AVIF 编码、HEIC 仅 Safari、动图丢动画）；`pica` 高质量缩放按需后置 | 待开始 |
+| 6 | `feature/image-tools` | `createImageBitmap`（EXIF 方向自动摆正）+ `OffscreenCanvas` + `convertToBlob`；PNG/JPEG/WebP 互转、JPEG/WebP 质量压缩、分辨率缩放（只缩不放）；批量处理、压缩前后体积对比、下载；UI 明示限制（无 AVIF 编码、HEIC 仅 Safari、动图丢动画）；`pica` 高质量缩放按需后置 | 已完成 |
 
 ## M4 第四期：SSH 密钥对
 
