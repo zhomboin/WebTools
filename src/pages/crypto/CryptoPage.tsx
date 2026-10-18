@@ -1,5 +1,6 @@
 import ToolPageShell from '../../components/ToolPageShell'
 
+import HashSection from './sections/HashSection'
 import PasswordSection from './sections/PasswordSection'
 
 export default function CryptoPage() {
@@ -10,6 +11,7 @@ export default function CryptoPage() {
       description="密码生成、加密与 Hash 计算，全部在本地完成。"
     >
       <PasswordSection />
+      <HashSection />
     </ToolPageShell>
   )
 }
