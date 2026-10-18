@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | M0 工程骨架 | Vite + React + TS strict + oxlint，hash 路由，四大类页面占位 | 已完成 |
 | M1 第一期：JSON + 日期时间 | JSON 处理工具、日期时间工具，引入 vitest 单测 | 已完成 |
-| M2 第二期：安全工具 | 密码生成、Hash、加密 | 待开始 |
+| M2 第二期：安全工具 | 密码生成、Hash、加密 | 已完成 |
 | M3 第三期：图片处理 | 压缩、格式转换 | 待开始 |
 | M4 第四期：SSH 密钥对 | Ed25519 密钥对生成 | 待开始 |
 | M5 扩展候选 | Base64/URL 编解码、UUID、JWT 解码、二维码、正则测试、文本 Diff、颜色转换、单位换算等 | 按需排期 |
@@ -26,7 +26,7 @@
 | --- | --- | --- | --- |
 | 3 | `feature/password-generator` | `crypto.getRandomValues` + 拒绝采样避免模偏差；长度、字符集、排除易混淆字符选项；强度估算展示 | 已完成 |
 | 4 | `feature/hash-tools` | WebCrypto（SHA-1/SHA-256/SHA-384/SHA-512、HMAC）；`hash-wasm` 动态 import（MD5/CRC32/SHA-3）；支持文本输入 | 已完成 |
-| 5 | `feature/encryption` | AES-GCM（默认，12 字节 IV）/ AES-CBC，口令派生密钥用 PBKDF2；RSA-OAEP 加解密 | 待开始 |
+| 5 | `feature/encryption` | AES-GCM（默认，12 字节 IV）/ AES-CBC，口令派生密钥用 PBKDF2；RSA-OAEP 加解密 | 已完成 |
 
 ## M3 第三期：图片处理
 
