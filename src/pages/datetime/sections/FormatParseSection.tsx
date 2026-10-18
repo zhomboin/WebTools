@@ -17,8 +17,10 @@ export default function FormatParseSection() {
   const parsed = useMemo(() => parseCustom(text, effectivePattern), [text, effectivePattern])
 
   return (
-    <section className="section-card">
-      <h2>格式化与解析</h2>
+    <section className="tsec">
+      <div className="tsec-head">
+        <h2>格式化与解析</h2>
+      </div>
       <div className="section-grid">
         <div>
           <h3>日期 → 文本</h3>

@@ -1,3 +1,4 @@
+import { Lock, Wrench } from 'lucide-react'
 import { NavLink, Outlet } from 'react-router-dom'
 
 const navItems = [
@@ -13,6 +14,9 @@ export default function AppLayout() {
     <div className="app">
       <header className="app-header">
         <NavLink to="/" className="app-title">
+          <span className="brand-mark">
+            <Wrench size={16} aria-hidden="true" />
+          </span>
           WebTools
         </NavLink>
         <nav className="app-nav">
@@ -27,6 +31,10 @@ export default function AppLayout() {
             </NavLink>
           ))}
         </nav>
+        <span className="header-privacy">
+          <Lock size={13} aria-hidden="true" />
+          本地处理 · 零上传
+        </span>
       </header>
       <main className="app-main">
         <Outlet />

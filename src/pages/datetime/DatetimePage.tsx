@@ -9,6 +9,7 @@ import TimeZoneSection from './sections/TimeZoneSection'
 export default function DatetimePage() {
   return (
     <ToolPageShell
+      category="datetime"
       title="日期时间"
       description="时间获取、时间戳转换、时区转换、格式化解析与时间差计算。"
     >

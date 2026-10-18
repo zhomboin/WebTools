@@ -15,8 +15,11 @@ export default function CurrentTimeSection() {
   const local = localTimeZone()
 
   return (
-    <section className="section-card">
-      <h2>当前时间</h2>
+    <section className="tsec">
+      <div className="tsec-head">
+        <h2>当前时间</h2>
+        <span className="sub">每秒刷新</span>
+      </div>
       <div className="result-list">
         <div className="result-row">
           <span className="result-label">本地（{local}）</span>
