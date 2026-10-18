@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 import Tabs, { type TabItem } from '../../components/Tabs'
 import ToolPageShell from '../../components/ToolPageShell'
@@ -11,7 +11,14 @@ const TABS: readonly TabItem<'compress' | 'convert'>[] = [
 ]
 
 export default function ImagePage() {
-  const [tab, setTab] = useState<'compress' | 'convert'>('compress')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const tabParam = searchParams.get('t')
+  const tab: 'compress' | 'convert' =
+    tabParam === 'convert' ? 'convert' : 'compress'
+
+  const changeTab = (key: 'compress' | 'convert') => {
+    setSearchParams({ t: key }, { replace: true })
+  }
 
   return (
     <ToolPageShell
@@ -19,7 +26,7 @@ export default function ImagePage() {
       title="图片处理"
       description="图片压缩与格式转换，全部在本地浏览器完成。"
     >
-      <Tabs items={TABS} active={tab} onChange={setTab} label="图片处理功能" />
+      <Tabs items={TABS} active={tab} onChange={changeTab} label="图片处理功能" />
       <div
         className="tab-panel"
         role="tabpanel"

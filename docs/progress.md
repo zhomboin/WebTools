@@ -4,10 +4,10 @@
 
 ## 当前状态
 
-- 阶段：M3 第三期完成，准备 M4 第四期（SSH 密钥对）
-- 已完成：需求与技术分析文档；项目规范与文档体系（含 `temp/`、`reports/` 目录约束、UI 布局约定）；工程骨架（Vite + React + TypeScript strict + oxlint，hash 路由，首页与四大类工具页占位，隐私提示组件）；GitHub 远端接入（SSH），main 已推送；开发计划制定（M0–M5）；JSON 处理工具（自研解析器精确定位错误行列、格式化/压缩/排序/Unicode 转义、vitest 单测）；日期时间工具（当前时间、时间戳互转、时区转换与常用时区对照、自定义格式化/解析、相对时间、时间差，全量时区列表，单测 20 例）；界面视觉优化（青瓷薄荷淡彩主题、分类专属色、分区式布局、1200px 容器、容器查询自适应、lucide-react 图标）；密码生成器（拒绝采样、字符集与易混淆排除、熵强度估算，单测 12 例）；Hash 计算（WebCrypto SHA 家族 + HMAC，hash-wasm 按需加载 MD5/CRC32/SHA-3，已知向量单测 15 例）；加解密（AES-GCM/CBC + PBKDF2 口令派生 + RSA-OAEP 3072 位 PEM，单测 14 例，浏览器往返验证含中文与 emoji）；安全工具页 Tab 化（多功能 Tab 分隔约定）；图片处理（压缩/格式转换双 Tab、批量处理、EXIF 摆正、质量与缩放、体积对比与下载，纯逻辑单测 14 例）
+- 阶段：M0–M4 全部完成，第一版四大类工具交付；后续为 M5 扩展候选（按需排期）
+- 已完成：需求与技术分析文档；项目规范与文档体系（含 `temp/`、`reports/` 目录约束、UI 布局约定）；工程骨架（Vite + React + TypeScript strict + oxlint，hash 路由，首页与四大类工具页占位，隐私提示组件）；GitHub 远端接入（SSH），main 已推送；开发计划制定（M0–M5）；JSON 处理工具（自研解析器精确定位错误行列、格式化/压缩/排序/Unicode 转义、vitest 单测）；日期时间工具（当前时间、时间戳互转、时区转换与常用时区对照、自定义格式化/解析、相对时间、时间差，全量时区列表，单测 20 例）；界面视觉优化（青瓷薄荷淡彩主题、分类专属色、分区式布局、1200px 容器、容器查询自适应、lucide-react 图标）；密码生成器（拒绝采样、字符集与易混淆排除、熵强度估算，单测 12 例）；Hash 计算（WebCrypto SHA 家族 + HMAC，hash-wasm 按需加载 MD5/CRC32/SHA-3，已知向量单测 15 例）；加解密（AES-GCM/CBC + PBKDF2 口令派生 + RSA-OAEP 3072 位 PEM，单测 14 例，浏览器往返验证含中文与 emoji）；安全工具页 Tab 化（多功能 Tab 分隔约定，Tab 状态同步 URL `?t=`）；图片处理（压缩/格式转换双 Tab、批量处理、EXIF 摆正、质量与缩放、体积对比与下载，纯逻辑单测 14 例）；SSH 密钥对（Ed25519 OpenSSH 格式、SHA256 指纹、明文私钥显著警告、复制/下载，单测 7 例）
 - 进行中：无
-- 下一步：M4 第四期 SSH 密钥对（`feature/ssh-keygen`，见 [开发计划](development-plan.md)）
+- 下一步：M5 扩展候选按需排期（Base64/URL、UUID、JWT、二维码、正则、Diff、颜色、单位换算，见 [开发计划](development-plan.md)）
 
 ## 修改记录
 
@@ -28,6 +28,7 @@
 | 2026-10-18 | 加解密：AES-GCM（12 字节 IV）/AES-CBC + PBKDF2（10 万次迭代）口令派生，密文格式 Base64(salt+iv+cipher)；RSA-OAEP 3072 位密钥对生成（SPKI/PKCS8 PEM 导出导入）；14 例单测（往返、错口令、损坏数据、密钥不匹配）；浏览器 GUI 验证 AES 与 RSA 加解密往返（含中文与 emoji）完全一致；M2 第二期完成 | feature/encryption | `src/lib/encryption.ts`、`src/lib/encryption.test.ts`、`src/pages/crypto/sections/EncryptionSection.tsx`、`src/index.css` |
 | 2026-10-18 | 安全工具页 Tab 化（用户反馈：多功能堆叠无重点）：新增共享 Tabs 组件（无障碍 tablist + 方向键），四个功能 Tab 各自呈现重点；EncryptionSection 拆分为 SymmetricSection 与 RsaSection；UI 布局约定写入规范（多功能必须 Tab 分隔、卡片适度使用） | feature/crypto-tabs | `src/components/Tabs.tsx`、`src/pages/crypto/`、`src/index.css`、`docs/conventions.md` |
 | 2026-10-18 | 图片处理：`createImageBitmap`（EXIF 方向摆正）+ `OffscreenCanvas.convertToBlob` 管线（JPEG 铺白底防透明变黑）；压缩/格式转换双 Tab 共享 Workbench（批量多选、质量滑杆、最大边长只缩不放、结果表含缩略图/前后体积对比/节省百分比/逐项下载）；限制 UI 明示；纯逻辑（尺寸计算/格式映射/文件名/字节格式化）14 例单测；M3 完成 | feature/image-tools | `src/lib/image.ts`、`src/lib/image.test.ts`、`src/pages/image/`、`src/index.css` |
+| 2026-10-18 | SSH 密钥对：Ed25519 OpenSSH 格式生成（公钥行 + 私钥 PEM + SHA256 指纹），种子 crypto.getRandomValues，ed25519-keygen `/ssh` 子路径动态加载（独立 chunk，主包不变）；明文私钥显著警告、复制/下载 id_ed25519(.pub)；安全工具页第 5 个 Tab；Tab 状态同步 URL `?t=`（crypto/image 两页，刷新可恢复）；7 例单测（含 wire 格式结构与 magic 头断言）；M4 完成，第一版四大类工具全部交付 | feature/ssh-keygen | `src/lib/ssh.ts`、`src/lib/ssh.test.ts`、`src/pages/crypto/sections/SshSection.tsx`、`src/pages/crypto/CryptoPage.tsx`、`src/pages/image/ImagePage.tsx`、`package.json` |
 
 ## 专项进度文档
 

@@ -10,7 +10,7 @@
 | M1 第一期：JSON + 日期时间 | JSON 处理工具、日期时间工具，引入 vitest 单测 | 已完成 |
 | M2 第二期：安全工具 | 密码生成、Hash、加密 | 已完成 |
 | M3 第三期：图片处理 | 压缩、格式转换 | 已完成 |
-| M4 第四期：SSH 密钥对 | Ed25519 密钥对生成 | 待开始 |
+| M4 第四期：SSH 密钥对 | Ed25519 密钥对生成 | 已完成 |
 | M5 扩展候选 | Base64/URL 编解码、UUID、JWT 解码、二维码、正则测试、文本 Diff、颜色转换、单位换算等 | 按需排期 |
 
 ## M1 第一期（当前）
@@ -38,7 +38,7 @@
 
 | 序号 | 分支 | 范围 | 状态 |
 | --- | --- | --- | --- |
-| 7 | `feature/ssh-keygen` | `ed25519-keygen`（动态 import）生成 Ed25519 OpenSSH 格式密钥对；明文私钥 UI 显著警告；passphrase 加密与 RSA/ECDSA 后置 | 待开始 |
+| 7 | `feature/ssh-keygen` | `ed25519-keygen`（动态 import，`/ssh` 子路径）生成 Ed25519 OpenSSH 格式密钥对（公钥行 + 私钥 PEM + SHA256 指纹）；明文私钥 UI 显著警告；passphrase 加密与 RSA/ECDSA 后置 | 已完成 |
 
 ## 专项工作
 
