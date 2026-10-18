@@ -57,12 +57,7 @@ export default function HashSection() {
   }
 
   return (
-    <section className="tsec">
-      <div className="tsec-head">
-        <h2>Hash 计算</h2>
-        <span className="sub">WebCrypto + hash-wasm（按需加载）</span>
-      </div>
-
+    <div>
       <textarea
         className="editor hash-input"
         value={text}
@@ -131,6 +126,7 @@ export default function HashSection() {
           <CopyButton value={hmacValue} />
         </span>
       </div>
-    </section>
+      <p className="hint-text">SHA 系列与 HMAC 由 WebCrypto 计算；MD5 / CRC32 / SHA-3 由 hash-wasm 按需加载。</p>
+    </div>
   )
 }

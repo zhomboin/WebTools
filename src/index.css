@@ -788,6 +788,45 @@ body {
   margin-top: 0;
 }
 
+/* ============ Tab 切换 ============ */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 6px 0 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.tab {
+  padding: 9px 18px;
+  font-size: 14.5px;
+  font-family: inherit;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.tab.active {
+  color: var(--c);
+  font-weight: 600;
+  border-bottom-color: var(--c);
+}
+
+.tab-panel > .tsec:first-child,
+.tab-panel > section:first-child {
+  margin-top: 0;
+}
+
 /* ============ 自适应 ============ */
 
 @media (max-width: 660px) {
